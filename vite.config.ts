@@ -1,15 +1,21 @@
-import { vitePlugin as remix } from "@remix-run/dev";
 import { defineConfig } from "vite";
-import tsconfigPaths from "vite-tsconfig-paths";
-
-declare module "@remix-run/node" {
-  interface Future {
-    v3_singleFetch: true;
-  }
-}
+import react from "@vitejs/plugin-react";            
+import tsconfigPaths from "vite-tsconfig-paths";     
+import { vitePlugin as remix } from "@remix-run/dev";
 
 export default defineConfig({
   plugins: [
+    // 1️⃣ Plugin React, avec Babel + styled-components pour SSR
+    react({
+      babel: {
+        plugins: [
+          ["babel-plugin-styled-components", { ssr: true, displayName: true }],
+        ],
+      },
+    }),
+    // 2️⃣ Résolution des chemins d’après tsconfig.json
+    tsconfigPaths(),
+    // 3️⃣ Plugin officiel Remix
     remix({
       future: {
         v3_fetcherPersist: true,
@@ -19,6 +25,14 @@ export default defineConfig({
         v3_lazyRouteDiscovery: true,
       },
     }),
-    tsconfigPaths(),
   ],
+  // 4️⃣ Force Vite à inclure styled-components dans le bundle SSR
+  ssr: {
+    noExternal: ["styled-components"],
+  },
+  server: {
+    hmr: {
+      overlay: false, // désactive l’overlay d’erreur Vite
+    },
+  },
 });

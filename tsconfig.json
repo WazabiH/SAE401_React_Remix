@@ -1,12 +1,19 @@
 {
   "include": [
+  // Types Remix
+    "remix.env.d.ts",
+    // Ton declaration file pour __STYLES__
+    "global.d.ts",
+    // Tous les TS/TSX et D.TS (pour les .d.ts)
     "**/*.ts",
     "**/*.tsx",
+    "**/*.d.ts",
+    // si tu en as encore :
     "**/.server/**/*.ts",
     "**/.server/**/*.tsx",
     "**/.client/**/*.ts",
     "**/.client/**/*.tsx"
-  ],
+     ],
   "compilerOptions": {
     "lib": ["DOM", "DOM.Iterable", "ES2022"],
     "types": ["@remix-run/node", "vite/client"],
