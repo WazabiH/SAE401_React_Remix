@@ -17,7 +17,7 @@
     left: 0;
     width: 100%; /* Prend toute la largeur du conteneur */
     height: 100%; /* Prend toute la hauteur du conteneur */
-    background-image: url('../img/Header_home1.png'); /* Chemin vers ton image */
+    background-image: url('../images/Header_home1.png'); /* Chemin vers ton image */
     background-size: contain; /* Redimensionne l'image pour couvrir tout le conteneur */
     background-position: center; /* Centre l'image horizontalement et verticalement */
     z-index: -1; /* Place le pseudo-élément derrière les autres éléments */

@@ -1,6 +1,10 @@
 // app/routes/accueil.tsx
-import Accueil from "~/components/Accueil";
+import { redirect } from "@remix-run/node";
 
-export default function AccueilRoute() {
-  return <Accueil />;
+export const loader = () => {
+  return redirect("/");
+};
+
+export default function AccueilRedirect() {
+  return null;
 }

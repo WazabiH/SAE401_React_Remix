@@ -3,9 +3,9 @@ import styled from "styled-components";
 // Components
 import FullButton from "../Buttons/FullButton";
 // Assets
-import AddImage2 from "../../assets/img/Promouvoir/Promouvoir-1.jpg";
-import HeaderImage from "../../assets/images/Promouvoir/Header-Promouvoir.jpg";
-import AddImage3 from "../../assets/images/Promouvoir/Promouvoir-2.jpg";
+import AddImage2 from "../../../public/assets/img/Promouvoir/Promouvoir-1.jpg";
+import HeaderImage from "../../../public/assets/img/Promouvoir/Header-Promouvoir.jpg";
+import AddImage3 from "../../../public/assets/img/Promouvoir/Promouvoir-2.jpg";
 
 export function HeaderPromouvoir() {
   return (
@@ -159,11 +159,19 @@ export function Promouvoir() {
         <div className="container">
           <HeaderInfo >
             <h4 className="font15">Réponses au Quizz de la plaquette</h4>
-            <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0"}}>
-                  <div style={{ width: "190px", marginLeft: "15px" }}>
-                    <button className="button1" onClick={() => window.open('https://drive.google.com/file/d/0B34j4qalEtJsd2psVS1tN3plaFU/view?resourcekey=0-nlUxtG1Hf7kOX6BhtZuY2w', '_blank')}> Les réponses </button>
-                  </div>
-            </ButtonsRow>
+            <button
+  type="button"
+  className="button1"
+  onClick={() =>
+    window.open(
+      'https://drive.google.com/file/d/0B34j4qalEtJsd2psVS1tN3plaFU/view?resourcekey=0-nlUxtG1Hf7kOX6BhtZuY2w',
+      '_blank'
+    )
+  }
+>
+  Les réponses
+</button>
+
           </HeaderInfo>
           </div>
       </div>

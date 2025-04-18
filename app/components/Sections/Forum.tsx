@@ -2,10 +2,10 @@ import styled from "styled-components";
 // Components
 import FullButton from "../Buttons/FullButton";
 // Assets
-import AddImage2 from "../../assets/img/Forum/Forum-1.jpg";
-import Programme21 from "../../assets/img/Forum/Programme21.jpg";
-import Programme20 from "../../assets/img/Forum/Programme20.jpg";
-import HeaderImage from "../../assets/img/Forum/Header-Forum.jpg";
+import AddImage2 from "../../../public/assets/img/Forum/Forum-1.jpg";
+import Programme21 from "../../../public/assets/img/Forum/Programme21.jpg";
+import Programme20 from "../../../public/assets/img/Forum/Programme20.jpg";
+import HeaderImage from "../../../public/assets/img/Forum/Header-Forum.jpg";
 
 
 

@@ -2,17 +2,18 @@
     padding: 50px;
 }
 
-.adherer-content2 .button{
-    padding: 10px 20px;
-    margin-top: 30px;
-    font-size: 1rem;
-    background-color: #CD212A;
-    color: white;
-    border: solid 2px #CD212A;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+.adherer-content2 .button {
+  padding: 10px 20px;
+  margin-top:20px; /* ← augmente l'espacement ici */
+  font-size: 1rem;
+  background-color: #CD212A;
+  color: white;
+  border: solid 2px #CD212A;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
+
 .adherer-content2 .button:hover{
     background-color: #fff;
     color: #CD212A;
@@ -80,7 +81,57 @@
     padding: 50px;
     
 }
-.adherer-content2 .h2{
+.adherer-content2 .h2 {
     text-transform: uppercase;
     margin-bottom: 30px;
-}
+  }
+  
+  .adherer-form-section {
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+    margin-top: 40px;
+  }
+  
+  .adherer-form label,
+  .adherer-form fieldset {
+    display: block;
+    margin-bottom: 15px;
+  }
+  
+  .adherer-form input[type="text"],
+  .adherer-form input[type="email"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+  }
+  
+  .adherer-form fieldset label {
+    display: block;
+    margin: 5px 0;
+  }
+  
+  .adherer-form button {
+    padding: 10px 20px;
+    background-color: #CD212A;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+
+  .paypal-button {
+    background-color: #0070ba;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    margin-top: 20px;
+  }
+  
+  .paypal-button:hover {
+    background-color: #005c9e;
+  }
+  
+  

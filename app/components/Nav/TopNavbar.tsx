@@ -30,8 +30,9 @@ export default function TopNavbar() {
   }, []); // <-- dépendances vides : on monte / démonte l’écouteur une seule fois
   return (
     <>
-      <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />
-      {sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
+{sidebarOpen && <Sidebar sidebarOpen={sidebarOpen} toggleSidebar={toggleSidebar} />}
+{sidebarOpen && <Backdrop toggleSidebar={toggleSidebar} />}
+
       <Wrapper 
       className="flexCenter animate whiteBg" 
       style={y > 100 ? { height: "60px" } : { height: "80px" }}
@@ -40,7 +41,9 @@ export default function TopNavbar() {
           <a href="/accueil" className="pointer flexNullCenter">
             <LogoIcon />
           </a>
-          <BurderWrapper className="pointer" onClick={() => toggleSidebar(!sidebarOpen)}>
+          <BurderWrapper 
+          className="pointer" 
+          onClick={() => toggleSidebar(!sidebarOpen)}>
             <BurgerIcon />
           </BurderWrapper>
           <UlWrapper className="flexNullCenter">
@@ -109,15 +112,17 @@ const NavInner = styled.div`
 `;
 const BurderWrapper = styled.button`
   outline: none;
-  border: 0px;
-  background-color: transparent;
+  border: 2px solid blue;
+  background-color: red;
   height: 100%;
   padding: 0 15px;
   display: none;
+
   @media (max-width: 760px) {
     display: block;
   }
 `;
+
 const UlWrapper = styled.ul`
   display: flex;
   @media (max-width: 760px) {

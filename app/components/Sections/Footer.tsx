@@ -24,9 +24,10 @@ export default function Contact() {
               © {getCurrentYear()} - <span className="darkRedColor font13">Rosalie & Ornella</span> - No Right Reserved
             </StyleP>
 
-            <Link className=" animate pointer font13" onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}>
+            <Link to="top" className="animate pointer font13" smooth={true} offset={-80}>
               Back to top
             </Link>
+
           </InnerWrapper>
         </div>
       </div>

@@ -3,7 +3,7 @@ import styled from "styled-components";
 import BlogBox from "../Elements/BlogBox";
 import FullButton from "../Buttons/FullButton";
 //Assets
-import HeaderImage from "../../assets/img/Activites/Header-Activites.jpg";
+import HeaderImage from "../../../public/assets/img/Activites/Header-Activites.jpg";
 
 export function HeaderActivités() {
 

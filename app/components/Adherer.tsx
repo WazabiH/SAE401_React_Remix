@@ -1,71 +1,124 @@
-import Hero from './Hero'; // Assure-toi d'importer le composant Hero correctement
-import './Adherer.css'; // Importe le fichier CSS pour le composant Adherer
-import FicheAdhesionPDF from '../../public/assets/fiche_adhesion.pdf';
-import adhererImg from '../../public/images/img-adherer.png'; // Chemin vers ton image
+import Hero from './Hero';
+import './Adherer.css';
+import adhererImg from '../../public/images/img-adherer.png';
 import heroImage from '../../public/images/drapeau_italie.jpg';
 
 const Adherer = () => {
-    const title = "Adhérer à notre association";
-    const description = "Bienvenue sur notre page d'adhésion. Découvrez les avantages de devenir membre de notre association.";
-    const buttonText = "Commencer";
+  const title = "Adhérer à notre association";
+  const description = "Bienvenue sur notre page d'adhésion. Découvrez les avantages de devenir membre de notre association.";
+  const buttonText = "Commencer";
 
-    const handleScrollToContent = () => {}
-        // Fonction pour faire défiler la page vers la partie suivante
+  const handleScrollToContent = () => {
+    const section = document.getElementById('adherer-content');
+    if (section) section.scrollIntoView({ behavior: 'smooth' });
+  };
 
-    const handleScrollToSection = (event, sectionId) => {
-        event.preventDefault();
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    };
+  return (
+    <div className="adherer-container">
+      <Hero
+        title={title}
+        description={description}
+        buttonText={buttonText}
+        heroImage={heroImage}
+        scrollTo={handleScrollToContent}
+      />
 
-    return (
-        <div className="adherer-container">
-            <Hero
-                title={title}
-                description={description}
-                buttonText={buttonText}
-                heroImage= {heroImage}
-                scrollTo={handleScrollToContent}
-            />
-
-            <div className="adherer-content1">
-                
-                <img src={adhererImg} alt="Adherer Image" className="adherer-image" />
-
-                <div className="txt-content">
-                    <h2 className='h2'>Pourquoi adhérer ?</h2>
-                    <h3 className='h3'>Adhérer à l'A.P.I.R.P. vous permet de :</h3>
-                    <ol className='custom-ol ol'>
-                            <li >Participer activement aux assemblées générales.</li>
-                            <li>Recevoir chaque année le bulletin imprimé de l’association et des plaquettes gratuites pour la promotion de l’italien.</li>
-                            <li>
-                                Soutenir des initiatives visant à promouvoir l’enseignement de l’italien en île-de-France, telles que :
-                                <ul className='ul'>
-                                    <li>- La réalisation de ce site, conçu comme un outil de partage et de renseignement pour tous les professeurs d’italien de l’île-de-France ;</li>
-                                    <li>- La création et l’impression de plaquettes pour la promotion de l’italien ;</li>
-                                    <li>- Notre participation à des manifestations et des événements culturels tels que La festa del libro e della cultura italiana ou le Forum des associations franco-italiennes, etc.</li>
-                                </ul>
-                            </li>
-                            <li>Connaître le réseau des professeurs d’italien de la Région Parisienne.</li>
-                            <li>Pouvoir être représenté et soutenu, en toutes circonstances et auprès des instances officielles, par une association reconnue.</li>
-                            <li>Bénéficier de l'union qui fait la force ; l'A.P.I.R.P. est un moyen de ne pas rester isolé et de favoriser des échanges actifs sur notre métier.</li>
-                    </ol>
-                </div>
-            </div>
-
-            <div className="adherer-content2">
-                <h2 className='h2'>Qui peut adhérer à l’association ?</h2>
-                <p className='p'>Peuvent faire partie de l’Association tous les professeurs d’italien de la région parisienne en activité ou à la retraite, quel que soit l’ordre d’enseignement auquel ils appartiennent.</p>
-                <h3>Comment y adhérer ?</h3>
-                <p className='p'>Pour devenir membres il faut : remplir une fiche d’inscription ET verser annuellement une cotisation, dont le montant est fixé chaque année par le Conseil d’administration.</p>
-
-                <button className="button" onClick={() => window.open(FicheAdhesionPDF, '_blank')}>Télécharger la fiche d'adhésion</button>
-            </div>
-            
+      <div id="adherer-content" className="adherer-content1">
+        <img src={adhererImg} alt="Adherer" className="adherer-image" />
+        <div className="txt-content">
+          <h2 className="h2">Pourquoi adhérer ?</h2>
+          <h3 className="h3">Adhérer à l'A.P.I.R.P. vous permet de :</h3>
+          <ol className="custom-ol ol">
+            <li>Participer activement aux assemblées générales.</li>
+            <li>Recevoir chaque année le bulletin imprimé et des plaquettes gratuites.</li>
+            <li>
+              Soutenir des initiatives :
+              <ul className="ul">
+                <li>- Réalisation de ce site</li>
+                <li>- Création de plaquettes</li>
+                <li>- Participation à des événements</li>
+              </ul>
+            </li>
+            <li>Connaître le réseau des professeurs d’italien.</li>
+            <li>Être représenté par une association reconnue.</li>
+            <li>Profiter de l'union qui fait la force.</li>
+          </ol>
         </div>
-    );
-}
+      </div>
+
+      <div className="adherer-content2">
+        <h2 className="h2">Qui peut adhérer ?</h2>
+        <p className="p">Tous les professeurs d’italien de la région parisienne.</p>
+
+        <h3>Comment adhérer ?</h3>
+        <p className="p">
+          Remplir une fiche d’inscription <strong>ET</strong> verser la cotisation annuelle.
+        </p>
+
+                <a
+        href="/assets/fiche_adhesion.pdf"
+        className="button"
+        target="_blank"
+        rel="noopener noreferrer"
+        >
+        Télécharger la fiche d'adhésion
+        </a>
+
+      </div>
+
+      {/* === Formulaire === */}
+      <section className="adherer-form-section">
+        <h2>Formulaire d'adhésion</h2>
+        <form className="adherer-form" onSubmit={(e) => e.preventDefault()}>
+          <label>
+            Nom :
+            <input type="text" name="nom" required />
+          </label>
+
+          <label>
+            Prénom :
+            <input type="text" name="prenom" required />
+          </label>
+
+          <label>
+            Email :
+            <input type="email" name="email" required />
+          </label>
+
+          <label>
+            Établissement :
+            <input type="text" name="etablissement" />
+          </label>
+
+          <fieldset>
+            <legend>Statut</legend>
+            <label><input type="radio" name="statut" value="Titulaire" required /> Titulaire</label>
+            <label><input type="radio" name="statut" value="Contractuel" /> Contractuel</label>
+            <label><input type="radio" name="statut" value="Retraité" /> Retraité</label>
+          </fieldset>
+
+          <fieldset>
+            <legend>Type d'adhésion</legend>
+            <label><input type="radio" name="cotisation" value="Adhésion simple" required /> Adhésion simple (10€)</label>
+            <label><input type="radio" name="cotisation" value="Adhésion + don" /> Adhésion + don (montant libre)</label>
+          </fieldset>
+
+          <button type="submit">Envoyer</button>
+        </form>
+      </section>
+
+      {/* === Paiement === */}
+      <section className="paypal-button-section">
+        <h3>Paiement de la cotisation</h3>
+        <p>Utilisez PayPal pour régler votre adhésion :</p>
+        <form action="https://www.paypal.com/donate" method="post" target="_blank">
+          <input type="hidden" name="business" value="TON-EMAIL@paypal.com" />
+          <input type="hidden" name="currency_code" value="EUR" />
+          <input type="submit" value="Payer avec PayPal" className="paypal-button" />
+        </form>
+      </section>
+    </div>
+  );
+};
 
 export default Adherer;

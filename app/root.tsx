@@ -13,12 +13,17 @@ import TopNavbar from "./components/Nav/TopNavbar";
 import Footer from "./components/Sections/Footer";
 
 // CSS global
-import tailwindStylesUrl from "./tailwind.css";
+import slickBaseUrl       from "slick-carousel/slick/slick.css";
+import slickThemeUrl      from "slick-carousel/slick/slick-theme.css";
 import indexStylesUrl from "./style/index.css";
+import flexboxGridStylesUrl from "./style/flexboxgrid.min.css";
+
 
 export const links: LinksFunction = () => [
-  { rel: "stylesheet", href: tailwindStylesUrl },
+  { rel: "stylesheet", href: slickBaseUrl },
+  { rel: "stylesheet", href: slickThemeUrl },
   { rel: "stylesheet", href: indexStylesUrl },
+  { rel: "stylesheet", href: flexboxGridStylesUrl },  // ← grille Flexbox ici
   // Polices Google (facultatif)
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
@@ -41,9 +46,12 @@ export default function App() {
     <html lang="fr">
       <head>
         {/* Injection des <link> (CSS & polices) */}
+        <meta charSet="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Links />
       </head>
       <body>
+        <div id="top"></div>
         {/* En‑tête commun à toutes les pages */}
         <TopNavbar />
 
