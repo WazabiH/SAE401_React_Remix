@@ -41,10 +41,6 @@ export default function TopNavbar() {
           <a href="/accueil" className="pointer flexNullCenter">
             <LogoIcon />
           </a>
-          <BurderWrapper 
-          className="pointer" 
-          onClick={() => toggleSidebar(!sidebarOpen)}>
-          </BurderWrapper>
           <UlWrapper className="flexNullCenter">
             <li className="semiBold font15 pointer">
               <a href="/accueil" style={{ padding: "10px 15px" }}>
