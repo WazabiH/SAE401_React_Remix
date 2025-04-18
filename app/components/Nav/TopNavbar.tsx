@@ -6,7 +6,7 @@ import Sidebar from "../Nav/Sidebar";
 import Backdrop from "../Elements/Backdrop";
 // Assets
 import LogoIcon from "../../../public/assets/svg/Logo";
-import BurgerIcon from "../../../public/assets/svg/BurgerIcon";
+
 
 export default function TopNavbar() {
   const [y, setY] = useState<number>(
@@ -44,7 +44,6 @@ export default function TopNavbar() {
           <BurderWrapper 
           className="pointer" 
           onClick={() => toggleSidebar(!sidebarOpen)}>
-            <BurgerIcon />
           </BurderWrapper>
           <UlWrapper className="flexNullCenter">
             <li className="semiBold font15 pointer">
