@@ -16,14 +16,12 @@ import Footer from "./components/Sections/Footer";
 import slickBaseUrl       from "slick-carousel/slick/slick.css";
 import slickThemeUrl      from "slick-carousel/slick/slick-theme.css";
 import indexStylesUrl from "./style/index.css";
-import flexboxGridStylesUrl from "./style/flexboxgrid.min.css";
 
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: slickBaseUrl },
   { rel: "stylesheet", href: slickThemeUrl },
-  { rel: "stylesheet", href: indexStylesUrl },
-  { rel: "stylesheet", href: flexboxGridStylesUrl },  // ← grille Flexbox ici
+  { rel: "stylesheet", href: indexStylesUrl }, // ← grille Flexbox ici
   // Polices Google (facultatif)
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {

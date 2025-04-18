@@ -43,7 +43,7 @@ export default function TopNavbar() {
           </a>
           <UlWrapper className="flexNullCenter">
             <li className="semiBold font15 pointer">
-              <a href="/accueil" style={{ padding: "10px 15px" }}>
+              <a href="/index" style={{ padding: "10px 15px" }}>
                 Accueil
               </a>
             </li>
