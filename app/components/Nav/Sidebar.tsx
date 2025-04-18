@@ -22,7 +22,7 @@ export default function Sidebar({ sidebarOpen, toggleSidebar }) {
 
       <UlStyle className="flexNullCenter flexColumn">
             <li className="semiBold font15 pointer">
-              <a href="/accueil" onClick={() => toggleSidebar(!sidebarOpen)} style={{ padding: "10px 15px" }}>
+              <a href="/index" onClick={() => toggleSidebar(!sidebarOpen)} style={{ padding: "10px 15px" }}>
                 Accueil
               </a>
             </li>

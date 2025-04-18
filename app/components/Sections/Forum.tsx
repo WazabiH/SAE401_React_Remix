@@ -57,13 +57,14 @@ export function Forum() {
               <p className="font12">Plus d'infos sur les<a href="https://padlet.com/apirpassociation/apirp2020" > renseignements.</a></p><br />
               <p className="font12">L'intégralité du forum sera retransmise sur la page Facebook du Forum des Associations italiennes. </p>  
               <ButtonsRow className="flexNullCenter" style={{ margin: "30px 0" }}>
-                <div style={{ width: "190px" }}>
-                  <FullButton title="Programme 20 juin" action={() => window.open(Programme20, '_blank')} />
-                </div>
-                <div style={{ width: "190px", marginLeft: "15px" }}>
-                  <FullButton title="Programme 21 juin" action={() => window.open(Programme21, '_blank')}  />
-                </div>
-              </ButtonsRow>
+  <div style={{ width: "190px" }}>
+    <FullButton title="Programme 20 juin" action={() => window.open(Programme20, '_blank')} />
+  </div>
+  <div style={{ width: "190px", marginLeft: "15px" }}>
+    <FullButton title="Programme 21 juin" action={() => window.open(Programme21, '_blank')} />
+  </div>
+</ButtonsRow>
+
             </AddRight>
           </Advertising>
         </div>

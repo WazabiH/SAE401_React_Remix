@@ -1,28 +1,37 @@
 import styled from "styled-components";
 
-export default function FullButton({ title, action, border }) {
+interface FullButtonProps {
+  title: string;
+  action?: () => void;
+  border?: boolean;
+}
+
+export default function FullButton({ title, action, border }: FullButtonProps) {
   return (
-    <Wrapper
+    <ButtonWrapper
       className="animate pointer radius8"
-      onClick={action ? () => action() : null}
-      border={border}
+      onClick={action}
+      $border={border}
     >
       {title}
-    </Wrapper>
+    </ButtonWrapper>
   );
 }
 
-const Wrapper = styled.button`
-  border: 1px solid ${(props) => (props.border ? "#7b151a" : "#CD212A")};
-  background-color: ${(props) => (props.border ? "transparent" : "#CD212A")};
+const ButtonWrapper = styled.button<{ $border?: boolean }>`
+  border: 1px solid ${(props) => (props.$border ? "#7b151a" : "#CD212A")};
+  background-color: ${(props) => (props.$border ? "transparent" : "#CD212A")};
   width: 100%;
   padding: 15px;
   outline: none;
-  color: ${(props) => (props.border ? "#7b151a" : "#fff")};
+  color: ${(props) => (props.$border ? "#7b151a" : "#fff")};
+  cursor: pointer;
+  transition: all 0.3s ease;
+
   :hover {
-    background-color: ${(props) => (props.border ? "transparent" : "#7b151a")};
+    background-color: ${(props) =>
+      props.$border ? "transparent" : "#7b151a"};
     border: 1px solid #7b151a;
-    color: ${(props) => (props.border ? "#CD212A" : "#fff")};
+    color: ${(props) => (props.$border ? "#CD212A" : "#fff")};
   }
 `;
-

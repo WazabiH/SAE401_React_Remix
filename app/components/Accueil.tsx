@@ -5,6 +5,7 @@ import image from '../../public/images/drapeau_italie2.jpg'; // Assure-toi que l
 import '../../public/images/Italie_icon.png';
 
 const Accueil = () => {
+  console.log("🔎 Je suis dans Accueil !");
   return (
     <div className="accueil-container">
 
@@ -37,7 +38,7 @@ const Accueil = () => {
       </div>
       {/* <img src='../img/italie_icon.png' alt="Description de l'image"/> */}
 
-      <img className="img" src="../images/Italie_icon.png" alt="Description de l'image" />
+      <img className="img" src="/images/Italie_icon.png" alt="Description de l'image" />
 
       <div className="accueil-container1">
 
