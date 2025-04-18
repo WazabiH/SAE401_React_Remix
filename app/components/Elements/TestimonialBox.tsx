@@ -1,4 +1,3 @@
-import React from "react";
 import styled from "styled-components";
 // Assets
 import QuoteIcon from "../../assets/svg/Quotes";

@@ -1,11 +1,11 @@
-import React from "react";
+
 import styled from "styled-components";
 // Components
 import FullButton from "../Buttons/FullButton";
 // Assets
 import AddImage2 from "../../assets/img/Promouvoir/Promouvoir-1.jpg";
-import HeaderImage from "../../assets/img/Promouvoir/Header-Promouvoir.jpg";
-import AddImage3 from "../../assets/img/Promouvoir/Promouvoir-2.jpg";
+import HeaderImage from "../../assets/images/Promouvoir/Header-Promouvoir.jpg";
+import AddImage3 from "../../assets/images/Promouvoir/Promouvoir-2.jpg";
 
 export function HeaderPromouvoir() {
   return (

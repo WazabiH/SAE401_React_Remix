@@ -1,6 +1,5 @@
-import React from 'react'
 import Hero from './Hero'
-import heroImage from '../img/img-venise.jpg';
+import heroImage from '../../public/images/img-venise.jpg';
 import './Enseigner.css';
 
 const Enseigner = () => {

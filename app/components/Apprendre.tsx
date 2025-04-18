@@ -1,7 +1,7 @@
 import Hero from './Hero';
 import UniversityTable from './UniversityTable';
 import './Apprendre.css';
-import heroImage from '../images/italie_rome.jpg';
+import heroImage from '../../public/images/italie_rome.jpg';
 
 
 const Apprendre = () => {
@@ -28,7 +28,7 @@ const Apprendre = () => {
         },
         {
             name: "Université Paris IV-Sorbonne",
-            logo: "../img/logo_UNI_ParisSorbonne.png",
+            logo: "../images/logo_UNI_ParisSorbonne.png",
             website: "https://www.exemple2.com",
             courses: 
             <ul>
