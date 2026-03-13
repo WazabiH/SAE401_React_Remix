@@ -13,16 +13,14 @@ import TopNavbar from "./components/Nav/TopNavbar";
 import Footer from "./components/Sections/Footer";
 
 // CSS global
-import slickBaseUrl       from "slick-carousel/slick/slick.css";
-import slickThemeUrl      from "slick-carousel/slick/slick-theme.css";
-import indexStylesUrl from "./style/index.css";
-
+import slickBaseUrl from "slick-carousel/slick/slick.css?url";
+import slickThemeUrl from "slick-carousel/slick/slick-theme.css?url";
+import indexStylesUrl from "./style/index.css?url";
 
 export const links: LinksFunction = () => [
   { rel: "stylesheet", href: slickBaseUrl },
   { rel: "stylesheet", href: slickThemeUrl },
-  { rel: "stylesheet", href: indexStylesUrl }, // ← grille Flexbox ici
-  // Polices Google (facultatif)
+  { rel: "stylesheet", href: indexStylesUrl },
   { rel: "preconnect", href: "https://fonts.googleapis.com" },
   {
     rel: "preconnect",
@@ -43,23 +41,15 @@ export default function App() {
   return (
     <html lang="fr">
       <head>
-        {/* Injection des <link> (CSS & polices) */}
         <meta charSet="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <Links />
       </head>
       <body>
         <div id="top"></div>
-        {/* En‑tête commun à toutes les pages */}
         <TopNavbar />
-
-        {/* Contenu spécifique à chaque route (index.tsx, divers.tsx…) */}
         <Outlet />
-
-        {/* Pied de page commun */}
         <Footer />
-
-        {/* Hooks Remix indispensables */}
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
